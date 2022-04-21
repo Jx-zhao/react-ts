@@ -1,5 +1,9 @@
 import React from "react";
-
-const Home:React.FC = () =><div>Home</div>
+import { Button } from "antd";
+const Home:React.FC = () =>{
+  return <div>
+    <Button type="primary">click</Button>
+  </div>
+}
 
 export default Home;
