@@ -4,7 +4,7 @@ const mergeRe = /^(Merge pull request|Merge branch)/
 const commitRE =
   /^(revert: )?(feat|fix|docs|dx|refactor|perf|test|workflow|build|ci|chore|types|wip|release|deps)(\(.+\))?: .{1,50}/
 
-  if(commitRE.test(msg)){
+  if(!commitRE.test(msg)){
     if(!mergeRe.test(msg)){
         console.log("git commit信息格式有问题");
         console.log(`需要使用以下格式 type(module):message
